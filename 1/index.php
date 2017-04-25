@@ -27,6 +27,7 @@ echo '<br>';
 
 $email = 'test@test.com';
 echo $email;
+echo '<br>';
 var_dump($email);
 echo '<br>';
 
