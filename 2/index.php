@@ -170,8 +170,8 @@ function gender ($name) {
         return $male;
     } elseif ($letter == 'а' || $letter == 'я' || $letter == 'ь') {
         return $female;
-    } elseif ($letter == 'а' || $letter == 'б' || $letter == 'в' || $letter == 'г' || $letter == 'д' || $letter == 'й' || $letter == 'к' || $letter == 'л' || $letter == 'м' ||
-              $letter == 'н' || $letter == 'р' || $letter == 'с' || $letter == 'т' || $letter == 'ф' || $letter == 'х' || $letter == 'ь' || $letter == 'я') {
+    } elseif ($letter == 'б' || $letter == 'в' || $letter == 'г' || $letter == 'д' || $letter == 'й' || $letter == 'к' || $letter == 'л' ||
+              $letter == 'м' || $letter == 'н' || $letter == 'р' || $letter == 'с' || $letter == 'т' || $letter == 'ф' || $letter == 'х') {
         return $male;
     } else {
         return null;
@@ -190,7 +190,7 @@ echo gender('Фома'); // мужской
 ?>
 <br>
 <?php
-echo var_dump(gender('Владислау')); // null
+var_dump(gender('Владислау')); // null
 ?>
 
 </body>
