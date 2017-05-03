@@ -67,9 +67,7 @@
 
 <hr><h4>Задание 2. Вычисление корней квадратного уравнения.</h4>
 <?php
-function discriminant ($a, $b, $c) {
-    return $b**2 - 4 * $a * $c;
-}
+require __DIR__ . '/functions.php';
 
 assert(0 == discriminant(0, 0, 0));
 assert(0 == discriminant(2, 4, 2));
@@ -141,55 +139,36 @@ if ( $D > 0 ) {
 
 <hr><h4>Задание 3. Оператор include.</h4>
 <?php
-var_dump(include 'test.php'); // выводит содержимое файла и true в случае успеха
-?>
-<br>
-<?php
-var_dump(include 'function.php'); // выводит warning и false в случае ошибки (файл не существует)
-?>
-<br>
-<?php
-var_dump(include('test.php')); // include можно использовать как функцию - выводит содержимое файла и true в случае успеха
-?>
-<br>
-<?php
-var_dump(include('math.php')); // из файла можно выводить не только содержимое, но и возвращать значения
+var_dump(include __DIR__ . '/test.php'); // выводит содержимое файла и true в случае успеха
+
+echo '<br>';
+
+var_dump(include __DIR__ . '/test123.php'); // выводит warning и false в случае ошибки (файл не существует)
+
+echo '<br>';
+
+var_dump(include(__DIR__ . '/test.php')); // include можно использовать как функцию - выводит содержимое файла и true в случае успеха
+
+echo '<br>';
+
+var_dump(include(__DIR__ . '/math.php')); // из файла можно выводить не только содержимое, но и возвращать значения
 ?>
 
 <hr><h4>Задание 4. Угадать пол.</h4>
 <?php
-/*
-Женские имена - https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5_%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0
-Мужские имена - https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%B8%D0%B5_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0
-*/
-function gender ($name) {
-    $male = 'Мужской';
-    $female = 'Женский';
-    $letter = mb_substr($name, mb_strlen($name, 'utf-8') - 1, 1);
-    if ($name == 'Игорь' || $name == 'Илья' || $name == 'Кузьма' || $name == 'Лука' || $name == 'Никита' || $name == 'Савва' || $name == 'Фома') {
-        return $male;
-    } elseif ($letter == 'а' || $letter == 'я' || $letter == 'ь') {
-        return $female;
-    } elseif ($letter == 'б' || $letter == 'в' || $letter == 'г' || $letter == 'д' || $letter == 'й' || $letter == 'к' || $letter == 'л' ||
-              $letter == 'м' || $letter == 'н' || $letter == 'р' || $letter == 'с' || $letter == 'т' || $letter == 'ф' || $letter == 'х') {
-        return $male;
-    } else {
-        return null;
-    }
-}
 
 echo gender('Алексей'); // мужской
-?>
-<br>
-<?php
+
+echo '<br>';
+
 echo gender('Мария'); // женский
-?>
-<br>
-<?php
+
+echo '<br>';
+
 echo gender('Фома'); // мужской
-?>
-<br>
-<?php
+
+echo '<br>';
+
 var_dump(gender('Владислау')); // null
 ?>
 
