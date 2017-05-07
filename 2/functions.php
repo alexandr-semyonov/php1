@@ -5,6 +5,12 @@ function discriminant ($a, $b, $c) {
     return $b**2 - 4 * $a * $c;
 }
 
+assert(0 == discriminant(0, 0, 0));
+assert(0 == discriminant(2, 4, 2));
+assert(1 == discriminant(1, 3, 2));
+assert(1 == discriminant(2, 5, 3));
+assert(4 == discriminant(3, 8, 5));
+
 /* Задание 4. Функция определения пола по имени.
 Женские имена - https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5_%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0
 Мужские имена - https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%82%D0%B5%D0%B3%D0%BE%D1%80%D0%B8%D1%8F:%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%B8%D0%B5_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0

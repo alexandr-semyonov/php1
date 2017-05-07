@@ -69,12 +69,6 @@
 <?php
 require __DIR__ . '/functions.php';
 
-assert(0 == discriminant(0, 0, 0));
-assert(0 == discriminant(2, 4, 2));
-assert(1 == discriminant(1, 3, 2));
-assert(1 == discriminant(2, 5, 3));
-assert(4 == discriminant(3, 8, 5));
-
 $a = 1;
 $b = 3;
 $c = 2;
