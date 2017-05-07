@@ -5,14 +5,14 @@ h4 {
     width: 910px;
     margin: 0 auto;
 }
-.image {
-    width: 800px;
-    margin: 0 auto;
-}
 .preview img {
     width: 240px;
     height: 180px;
     margin: 20px 30px;
+}
+.image {
+    width: 800px;
+    margin: 0 auto;
 }
 .image img {
     width: 800px;

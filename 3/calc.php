@@ -1,22 +1,26 @@
 <?php
 
 if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
-    switch ($_GET['operation']) {
-        case '+':
-            $result = $_GET['num1'] + $_GET['num2'];
-            break;
-        case '-':
-            $result = $_GET['num1'] - $_GET['num2'];
-            break;
-        case '*':
-            $result = $_GET['num1'] * $_GET['num2'];
-            break;
-        case '/':
-            $result = $_GET['num1'] / $_GET['num2'];
-            break;
-        default:
-            $result = $_GET['num1'] + $_GET['num2'];
-            break;
+    if (0 == $_GET['num2'] && $_GET['operation'] == '/') {
+        $result = 'На ноль делить нельзя';
+    } else {
+        switch ($_GET['operation']) {
+            case '+':
+                $result = $_GET['num1'] + $_GET['num2'];
+                break;
+            case '-':
+                $result = $_GET['num1'] - $_GET['num2'];
+                break;
+            case '*':
+                $result = $_GET['num1'] * $_GET['num2'];
+                break;
+            case '/':
+                $result = $_GET['num1'] / $_GET['num2'];
+                break;
+            default:
+                $result = $_GET['num1'] + $_GET['num2'];
+                break;
+        }
     }
 } else {
     $_GET['num1'] = '';
