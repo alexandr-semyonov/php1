@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Домашнее задание 3</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
     foreach ($images as $key => $image):
         if ($_GET['id'] == $key) {
     ?>
-        <img src="images/<?php echo $image; ?>">
+        <img src="/images/<?php echo $image; ?>">
     <?php
         }
     endforeach;

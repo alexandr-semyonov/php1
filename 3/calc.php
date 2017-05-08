@@ -38,7 +38,7 @@ if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
 
 <h4>Калькулятор</h4>
 
-<form action="calc.php" method="get">
+<form action="/calc.php" method="get">
     <input type="text" name="num1" value="<?php echo $_GET['num1']; ?>" />
     <select name="operation">
         <option value="+">+</option>
