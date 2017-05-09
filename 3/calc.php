@@ -1,5 +1,7 @@
 <?php
 
+$operations = ['+', '-', '*', '/'];
+
 if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
     if (0 == $_GET['num2'] && $_GET['operation'] == '/') {
         $result = 'На ноль делить нельзя';
@@ -41,10 +43,9 @@ if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
 <form action="/calc.php" method="get">
     <input type="text" name="num1" value="<?php echo $_GET['num1']; ?>" />
     <select name="operation">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
+        <?php foreach ($operations as $op): ?>
+        <option value="<?php echo $op; ?>"<?php if ($_GET['operation'] == $op) { ?> selected<?php } ?>><?php echo $op; ?></option>
+        <?php endforeach; ?>
     </select>
     <input type="text" name="num2" value="<?php echo $_GET['num2']; ?>" />
     <input type="submit" value="=">
