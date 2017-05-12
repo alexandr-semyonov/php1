@@ -10,15 +10,7 @@
 <h4>Природа</h4>
 
 <div class="image">
-    <?php
-    foreach ($images as $key => $image):
-        if ($_GET['id'] == $key) {
-    ?>
-        <img src="/images/<?php echo $image; ?>">
-    <?php
-        }
-    endforeach;
-    ?>
+    <img src="/images/<?php echo $images[$_GET['id']]; ?>">
 </div>
 
 </body>
