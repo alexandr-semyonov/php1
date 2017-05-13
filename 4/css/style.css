@@ -1,0 +1,20 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+h4 {
+    text-align: center;
+}
+div {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 5px solid #bfbfbf;
+    background-color: #d9d9d9;
+}
+form {
+    width: 500px;
+    margin-top: 20px;
+}
+input {
+    margin-top: 10px;
+}
