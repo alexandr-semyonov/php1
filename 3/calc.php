@@ -3,31 +3,39 @@
 $operations = ['+', '-', '*', '/'];
 
 if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
-    if (0 == $_GET['num2'] && $_GET['operation'] == '/') {
+    $num1 = $_GET['num1'];
+    $num2 = $_GET['num2'];
+    if (in_array($_GET['operation'], $operations)) {
+        $operation = $_GET['operation'];
+    } else {
+        $operation = '+';
+    }
+
+    if (0 == $num2 && $operation == '/') {
         $result = 'На ноль делить нельзя';
     } else {
-        switch ($_GET['operation']) {
+        switch ($operation) {
             case '+':
-                $result = $_GET['num1'] + $_GET['num2'];
+                $result = $num1 + $num2;
                 break;
             case '-':
-                $result = $_GET['num1'] - $_GET['num2'];
+                $result = $num1 - $num2;
                 break;
             case '*':
-                $result = $_GET['num1'] * $_GET['num2'];
+                $result = $num1 * $num2;
                 break;
             case '/':
-                $result = $_GET['num1'] / $_GET['num2'];
+                $result = $num1 / $num2;
                 break;
             default:
-                $result = $_GET['num1'] + $_GET['num2'];
+                $result = $num1 + $num2;
                 break;
         }
     }
 } else {
-    $_GET['num1'] = '';
-    $_GET['num2'] = '';
-    $_GET['operation'] = '';
+    $num1 = '';
+    $num2 = '';
+    $operation = '';
     $result = '';
 }
 ?>
@@ -41,20 +49,20 @@ if (isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['operation'])) {
 <h4>Калькулятор</h4>
 
 <form action="/calc.php" method="get">
-    <input type="text" name="num1" value="<?php echo $_GET['num1']; ?>" />
+    <input type="text" name="num1" value="<?php echo $num1; ?>" />
     <select name="operation">
         <?php foreach ($operations as $op): ?>
-        <option value="<?php echo $op; ?>"<?php if ($_GET['operation'] == $op) { ?> selected<?php } ?>><?php echo $op; ?></option>
+        <option value="<?php echo $op; ?>"<?php if ($operation == $op) { ?> selected<?php } ?>><?php echo $op; ?></option>
         <?php endforeach; ?>
     </select>
-    <input type="text" name="num2" value="<?php echo $_GET['num2']; ?>" />
+    <input type="text" name="num2" value="<?php echo $num2; ?>" />
     <input type="submit" value="=">
     <?php echo $result; ?>
 </form>
 
 <?php
-if ($_GET['num1'] != '' && $_GET['num2'] != '' && $_GET['operation'] != '') {
-    echo $_GET['num1'] . ' ' . $_GET['operation'] . ' ' . $_GET['num2'] . ' = ' . $result;
+if ($num1 != '' && $num2 != '' && $operation != '') {
+    echo $num1 . ' ' . $operation . ' ' . $num2 . ' = ' . $result;
 }
 ?>
 
