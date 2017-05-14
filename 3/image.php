@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/data.php'; ?>
+<?php
+require __DIR__ . '/data.php';
+$image = $images[$_GET['id']];
+?>
 
 <html>
 <head>
@@ -10,7 +13,7 @@
 <h4>Природа</h4>
 
 <div class="image">
-    <img src="/images/<?php echo $images[$_GET['id']]; ?>">
+    <img src="/images/<?php echo $image; ?>">
 </div>
 
 </body>
