@@ -9,6 +9,7 @@ function searchCity ($firstLetter, $citiesArray) {
             return $city;
         }
     }
+    return null;
 }
 
 assert('Уфа' == searchCity('У', $cities));

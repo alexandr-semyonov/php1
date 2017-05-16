@@ -9,8 +9,8 @@ if (isset($_POST['city'])) {
         $letter = mb_substr($city, mb_strlen($city) - 2, 1);
     }
 } else {
-    $city = NULL;
-    $letter = NULL;
+    $city = null;
+    $letter = null;
 }
 ?>
 
