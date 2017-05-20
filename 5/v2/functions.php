@@ -5,7 +5,7 @@ $cities = require __DIR__ . '/data.php';
 function searchCity ($firstLetter, $citiesArray) {
     $firstLetter = mb_strtoupper($firstLetter);
     foreach ($citiesArray as $city) {
-        if (!empty($firstLetter) && 0 === strpos($city, $firstLetter)) {
+        if ($firstLetter == mb_substr($city, 0, 1)) {
             return $city;
         }
     }
