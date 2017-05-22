@@ -1,36 +1,5 @@
 <?php
 
-class TextFile
-{
-    protected $lines;
-    public $path;
-
-    public function getData()
-    {
-        return $this->lines;
-    }
-
-    public function append($text)
-    {
-        $this->lines[] = $text;
-        return $this;
-    }
-
-    public function save()
-    {
-        file_put_contents ($this->path, implode("\n", $this->lines));
-    }
-}
-
-class GuestBook extends TextFile
-{
-    public function __construct($path)
-    {
-        $this->path = $path;
-        $this->lines = file($path, FILE_IGNORE_NEW_LINES);
-    }
-}
-
 class Uploader
 {
     public $name;
@@ -68,7 +37,7 @@ class Uploader
                 $filename = $i . '_' . $_FILES[$this->name]['name'];
                 $i++;
             }
-            move_uploaded_file ($_FILES[$this->name]['tmp_name'], $this->path . $filename);
+            move_uploaded_file($_FILES[$this->name]['tmp_name'], $this->path . $filename);
             return 'Файл загружен';
         } else {
             return 'Ошибка при загрузке файла';

@@ -1,4 +1,7 @@
-<?php require __DIR__ . '/classes.php'; ?>
+<?php
+require __DIR__ . '/classes/TextFile.php';
+require __DIR__ . '/classes/GuestBook.php';
+?>
 
 <!DOCTYPE html>
 <html>

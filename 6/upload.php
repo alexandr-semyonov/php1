@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/classes.php';
+require __DIR__ . '/classes/Uploader.php';
 $file = new Uploader('userFile');
 ?>
 
