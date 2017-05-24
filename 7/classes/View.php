@@ -12,13 +12,13 @@ class View
 
     public function display($template)
     {
-        include __DIR__ . '/../templates/' . $template . '.html';
+        include $template . '.html';
     }
 
     public function render($template)
     {
         ob_start();
-        include __DIR__ . '/../templates/' . $template . '.html';
+        include $template . '.html';
         $content = ob_get_contents();
         ob_end_clean();
 
