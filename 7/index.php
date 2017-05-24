@@ -13,4 +13,4 @@ include __DIR__ . '/templates/GuestBook.html';
 $view = new View();
 
 
-$view->assign('GuestBook', $book)->display(__DIR__ . '/templates/GuestBook');
+$view->assign('GuestBook', $book)->display(__DIR__ . '/templates/GuestBook.html');
