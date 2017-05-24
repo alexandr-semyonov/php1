@@ -8,11 +8,10 @@
 <body>
 <h4>Гостевая книга</h4>
 
+
 <?php
-
-
-foreach ($book->getData() as $record){
-    echo $record->render('GuestBookRecord');
+foreach ($this->data['GuestBook']->getData() as $record){
+    echo $record->render();
 }
 ?>
 

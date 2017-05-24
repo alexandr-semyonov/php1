@@ -14,15 +14,15 @@ class GuestBookRecord
         return $this->message;
     }
 
-    public function display($template)
+    public function display()
     {
-        include __DIR__ . '/../templates/' . $template . '.html';
+        include __DIR__ . '/../templates/GuestBookRecord.html';
     }
 
-    public function render($template)
+    public function render()
     {
         ob_start();
-        include __DIR__ . '/../templates/' . $template . '.html';
+        include __DIR__ . '/../templates/GuestBookRecord.html';
         $content = ob_get_contents();
         ob_end_clean();
 
