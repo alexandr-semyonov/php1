@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 7</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<h4>Новости</h4>
+
+<?php
+
+foreach ($this->data['News']->getNews() as $article){
+    $article->display();
+}
+?>
+
+</body>
+</html>
