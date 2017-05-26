@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<h3><?php echo $this->data['News']->getArticleById($_GET['id'])->header; ?></h3>
+<h3><?php echo $this->data['News']->getById($_GET['id'])->header; ?></h3>
 <div>
-    <?php echo $this->data['News']->getArticleById($_GET['id'])->fullText; ?>
+    <?php echo $this->data['News']->getById($_GET['id'])->fullText; ?>
     <div class="down">
-        <span class="date"><?php echo $this->data['News']->getArticleById($_GET['id'])->date; ?></span>
-        <span class="author"><?php echo $this->data['News']->getArticleById($_GET['id'])->author; ?></span>
+        <span class="date"><?php echo $this->data['News']->getById($_GET['id'])->date; ?></span>
+        <span class="author"><?php echo $this->data['News']->getById($_GET['id'])->author; ?></span>
     </div>
 </div>
 

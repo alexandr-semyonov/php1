@@ -21,7 +21,7 @@ class News
         return $this->data;
     }
 
-    public function getArticleById($id)
+    public function getById($id)
     {
         --$id;
         return $this->data[(int)$id];
