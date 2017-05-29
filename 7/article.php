@@ -2,7 +2,7 @@
 require __DIR__ . '/classes/News.php';
 require __DIR__ . '/classes/View.php';
 
-if (isset($_GET['id']) && (int)($_GET['id']) > 0){
+if (isset($_GET['id'])){
     $id = (int)$_GET['id'];
 
     $article = (new News(__DIR__ . '/data/news.txt'))->getById($id);
