@@ -8,16 +8,12 @@
 <body>
 <h4>Новости</h4>
 
-<?php foreach ($this->data['News']->getNews() as $article): ?>
-
-    <article>
-        <div>
-            <h3><a href="/article.php?id=<?php echo $article->id; ?>"><?php echo $article->header; ?></a></h3>
-            <?php echo $article->shortText; ?>
-        </div>
-    </article>
-
-<?php endforeach; ?>
+<?php
+foreach ($this->data['News']->getNews() as $article){
+    $record = new View;
+    $record->assign('Article', $article)->display(__DIR__ . '/ArticleRecord.html');
+}
+?>
 
 </body>
 </html>
