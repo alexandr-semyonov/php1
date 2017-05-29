@@ -4,18 +4,18 @@ class View
 {
     protected $data;
 
-    public function assign($name, $value)
+    public function assign(string $name, $value)
     {
         $this->data[$name] = $value;
         return $this;
     }
 
-    public function display($template)
+    public function display(string $template)
     {
         include $template;
     }
 
-    public function render($template)
+    public function render(string $template)
     {
         ob_start();
         include $template;

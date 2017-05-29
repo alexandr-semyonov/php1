@@ -10,7 +10,8 @@
 
 <?php
 foreach ($this->data['GuestBook']->getData() as $record){
-    $record->display();
+    $line = new View();
+    $line->assign('Record', $record)->display(__DIR__ . '/GuestBookRecord.html');
 }
 ?>
 

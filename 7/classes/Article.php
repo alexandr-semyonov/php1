@@ -11,35 +11,21 @@ class Article
     public $shortText;
     public $fullText;
 
-    public function __construct($article)
+    public function __construct(string $article)
     {
         $this->article = $article;
-        $id = explode('|', $this->article)[0];
+        $data = explode('|', $this->article);
+        $id = $data[0];
         $this->id = ++$id;
-        $this->date = explode('|', $this->article)[1];
-        $this->author = explode('|', $this->article)[2];
-        $this->header = strip_tags(explode('|', $this->article)[3]);
-        $this->shortText = strip_tags(mb_substr(explode('|', $this->article)[4], 0, 120) . '...');
-        $this->fullText = explode('|', $this->article)[4];
+        $this->date = $data[1];
+        $this->author = $data[2];
+        $this->header = strip_tags($data[3]);
+        $this->shortText = strip_tags(mb_substr($data[4], 0, 120) . '...');
+        $this->fullText = $data[4];
     }
 
     public function getArticle()
     {
         return $this->article;
-    }
-
-    public function display()
-    {
-        include __DIR__ . '/../templates/ArticleRecord.html';
-    }
-
-    public function render()
-    {
-        ob_start();
-        include __DIR__ . '/../templates/ArticleRecord.html';
-        $content = ob_get_contents();
-        ob_end_clean();
-
-        return $content;
     }
 }

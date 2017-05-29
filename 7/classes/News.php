@@ -6,7 +6,7 @@ class News
     protected $data;
     public $path;
 
-    public function __construct($path)
+    public function __construct(string $path)
     {
         $this->path = $path;
         $this->data = [];
@@ -21,9 +21,9 @@ class News
         return $this->data;
     }
 
-    public function getById($id)
+    public function getById(string $id)
     {
         --$id;
-        return $this->data[(int)$id];
+        return $this->data[$id];
     }
 }

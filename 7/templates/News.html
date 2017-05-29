@@ -8,12 +8,16 @@
 <body>
 <h4>Новости</h4>
 
-<?php
+<?php foreach ($this->data['News']->getNews() as $article): ?>
 
-foreach ($this->data['News']->getNews() as $article){
-    $article->display();
-}
-?>
+    <article>
+        <div>
+            <h3><a href="/article.php?id=<?php echo $article->id; ?>"><?php echo $article->header; ?></a></h3>
+            <?php echo $article->shortText; ?>
+        </div>
+    </article>
+
+<?php endforeach; ?>
 
 </body>
 </html>
