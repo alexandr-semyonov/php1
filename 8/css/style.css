@@ -1,0 +1,61 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+}
+h4 {
+    text-align: center;
+}
+
+div {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 5px solid #bfbfbf;
+    background-color: #d9d9d9;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+form {
+    margin-top: 50px;
+}
+textarea {
+    width: 1000px;
+    height: 75px;
+}
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form {
+    width: 1000px;
+    height: 20px;
+    display: block;
+}
+.down {
+    border: none;
+
+}
+button {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    float: right;
+}
+.btn, .author {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.delete {
+    background: #d9d9d9 url(/images/delete.jpg) no-repeat center;
+}
+.update {
+    background: #d9d9d9 url(/images/update.jpg) no-repeat center;
+}
+.text {
+    height: 200px;
+}

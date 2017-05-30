@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 8</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<h4>Новости</h4>
+
+<?php foreach ($this->data['news'] as $record): ?>
+
+<article>
+    <div>
+        <h3><a href="/article.php?id=<?php echo $record['id']; ?>"><?php echo $record['title']; ?></a></h3>
+        <?php echo strip_tags(mb_substr($record['text'], 0, 260) . '...'); ?>
+    </div>
+</article>
+
+<?php endforeach; ?>
+
+<h4>Добавить новость</h4>
+
+<form action="/send.php" method="post">
+    Заголовок:
+    <input type="text" name="title" class="form" required>
+    Текст:
+    <textarea name="text" class="text" required></textarea>
+    Автор:
+    <input type="text" name="author" class="form">
+    <input type="submit" name="add" value="Отправить">
+</form>
+
+</body>
+</html>

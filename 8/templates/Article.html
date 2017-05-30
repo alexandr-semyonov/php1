@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание 8</title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<h3><?php echo $this->data['record']['title']; ?></h3>
+<div>
+    <?php echo $this->data['record']['text']; ?>
+    <div class="down">
+        <form action="/send.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+            <button type="submit" name="delete" class="delete"></button>
+        </form>
+        <form action="/update.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+            <button type="submit" name="update" class="update"></button>
+        </form>
+        <span class="author"><?php echo $this->data['record']['author']; ?></span>
+    </div>
+</div>
+
+</body>
+</html>
