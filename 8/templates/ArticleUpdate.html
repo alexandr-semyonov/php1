@@ -7,6 +7,8 @@
 </head>
 <body>
 
+<span class="back"><a href="/article.php?id=<?php echo $this->data['record']['id']; ?>">Назад</a></span>
+
 <form action="/send.php" method="post">
     <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
     Заголовок:
