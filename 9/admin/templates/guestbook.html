@@ -1,0 +1,24 @@
+<?php include __DIR__ . '/header.html'; ?>
+
+<div class="clearfix">
+
+<?php foreach($this->data['guestbook'] as $record): ?>
+
+    <div class="comment">
+        <div class="comment-avatar"></div>
+        <form action="/send.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $record['id']; ?>">
+            <button type="submit" name="delete" class="del"></button>
+        </form>
+        <div class="comment-author"><?php echo $record['name']; ?></div>
+        <div class="comment-text">
+            <?php echo $record['text']; ?>
+            <div class="comment-date"><?php echo $record['date']; ?></div>
+        </div>
+    </div>
+
+<?php endforeach; ?>
+
+</div>
+
+<?php include __DIR__ . '/footer.html'; ?>

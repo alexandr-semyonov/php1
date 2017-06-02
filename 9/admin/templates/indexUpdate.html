@@ -1,0 +1,14 @@
+<?php include __DIR__ . '/header.html'; ?>
+
+<div class="main">
+    <form action="/send.php" method="post" class="update">
+        <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+        Заголовок:
+        <input type="text" name="title" value="<?php echo $this->data['record']['title']; ?>">
+        Текст:
+        <textarea name="text"><?php echo $this->data['record']['text']; ?></textarea>
+        <input type="submit" name="update" value="Сохранить">
+    </form>
+</div><!-- main -->
+
+<?php include __DIR__ . '/footer.html'; ?>

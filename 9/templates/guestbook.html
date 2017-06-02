@@ -1,0 +1,26 @@
+<?php include __DIR__ . '/header.html'; ?>
+
+<div class="clearfix">
+
+<?php foreach($this->data['guestbook'] as $record): ?>
+
+    <div class="comment">
+        <div class="comment-avatar"></div>
+        <div class="comment-author"><?php echo $record['name']; ?></div>
+        <div class="comment-text">
+            <?php echo $record['text']; ?>
+            <div class="comment-date"><?php echo $record['date']; ?></div>
+        </div>
+    </div>
+
+<?php endforeach; ?>
+
+</div>
+<form action="/send.php" method="post" class="guestbook">
+    <label>Добавить запись</label>
+    <input type="text" name="name" placeholder="Введите имя">
+    <textarea name="text" placeholder="Введите сообщение" required></textarea>
+    <input type="submit" name="add" value="Оставить запись">
+</form>
+
+<?php include __DIR__ . '/footer.html'; ?>

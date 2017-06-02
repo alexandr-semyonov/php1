@@ -1,0 +1,365 @@
+@import url(reset.css);
+@import url(fonts.css);
+/* Общие */
+html,
+body {
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+}
+body {
+    font: 16px/22px Display, Calibri, "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    color: #777777;
+    background: #4c4c4c url(/images/background.jpg) repeat;
+}
+a {
+    color: #d8aa46;
+    text-decoration: none;
+}
+a:hover {
+    color: #d8aa46;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Display, Calibri, "Open Sans", Arial, sans-serif;
+    color: #333333;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+h1 {font-size: 2.6em;}
+h2 {font-size: 2.2em;}
+h3 {font-size: 1.8em;}
+h4 {font-size: 1.4em;}
+h5 {font-size: 1em;}
+h6 {font-size: .8em;}
+p {
+    padding-bottom: 10px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #555555;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.right {
+    float: right;
+}
+.left {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.relative {
+    position: relative;
+}
+.blockLeft,
+.blockRight {
+    padding-top: 20px;
+}
+.blockLeft {
+    width: 400px;
+}
+.blockRight {
+    width: 800px;
+}
+.sidebar-menu {
+    width: 300px;
+    margin: 0 auto;
+}
+/* Лого */
+.logo-wrapper {
+    background-color: #e5e8ed;
+    text-align: center;
+    padding: 40px;
+}
+.logo-wrapper h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
+.logo-wrapper h1 span {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+}
+/* Меню */
+.menu-wrapper ul.menu {
+    background-color: #ffffff;
+    text-align: center;
+}
+.menu-wrapper ul.menu li {
+    border-top: 1px solid #c7cdd8;
+}
+.menu-wrapper ul.menu li:last-child {
+    border-bottom: 10px solid #f9b104;
+}
+.menu-wrapper ul.menu li a {
+    text-transform: uppercase;
+    display: block;
+    padding: 18px 30px;
+    color: #555;
+    font-weight: 600;
+    font-size: 20px;
+}
+.menu-wrapper ul.menu li a:hover,
+.menu-wrapper ul.menu li a.active {
+    background-color: #e5e8ed;
+}
+.about a, .photo a, .book a {
+    width: 226px;
+    height: 100px;
+    margin: 0 20px 20px 20px;
+    display: block;
+    //border-radius: 10px;
+}
+/* Кнопки навигации */
+.about a {
+    background: #ffffff url(/images/icons/about.jpg) no-repeat center;
+}
+.about a:hover, .about a:active, .about a.active {
+    background: #f9b104 url(/images/icons/about_active.jpg) no-repeat center;
+}
+.photo a {
+    background: #ffffff url(/images/icons/photo.jpg) no-repeat center;
+}
+.photo a:hover, .photo a:active, .photo a.active {
+    background: #f9b104 url(/images/icons/photo_active.jpg) no-repeat center;
+}
+.book a {
+    background: #ffffff url(/images/icons/book.jpg) no-repeat center;
+}
+.book a:hover, .book a:active, .book a.active {
+    background: #f9b104 url(/images/icons/book_active.jpg) no-repeat center;
+}
+/* Основное поле */
+.main {
+    margin: 0 20px 20px 20px;
+    padding: 30px;
+    background-color: #ffffff;
+    //border-radius: 10px;
+}
+/* Галерея */
+.gallery {
+    width: 226px;
+    height: 156px;
+    margin: 0 20px 20px 20px;
+    background-color: #ffffff;
+    display: block;
+}
+.gallery img {
+    width: 216px;
+    height: 146px;
+    margin: 5px;
+}
+.image {
+    width: 760px;
+    margin: 0 20px 20px 20px;
+    background-color: #ffffff;
+    display: block;
+}
+.image img {
+    width: 740px;
+    margin: 10px;
+}
+/* Гостевая книга */
+.comment {
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+.comment-avatar {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: -30px;
+    background: #7f8c8c url("/images/icons/avatar.png") no-repeat 50% 50%;
+}
+.comment-author {
+    margin-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 20px;
+    color: #f9b104;
+    font-size: 16px;
+    font-weight: bold;
+}
+.comment-text {
+    padding: 10px 10px 0 40px;
+    color: #555;
+    background-color: #f8f8f8;
+    border-bottom: 5px solid #999999;
+}
+.comment-date {
+    font-size: 12px;
+    color: #aaa;
+}
+.guestbook {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.guestbook input,
+.guestbook textarea {
+    width: 720px;
+    margin-top: 10px;
+    padding: 0 5px;
+    background-color: #fff;
+    border: 1px solid #999999;
+}
+.guestbook input[type="submit"] {
+    width: 732px;
+}
+.guestbook label {
+    color: #f9b104;
+}
+.guestbook input {
+    height: 25px;
+}
+.guestbook textarea {
+    height: 75px;
+}
+/* Добавление, удаление, редактирование и загрузка фото */
+.del, .upd {
+    float: right;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.del {
+    background: url(/images/icons/delete.png) no-repeat 50% 50%;
+}
+.upd {
+    background: url(/images/icons/update.png) no-repeat 50% 50%;
+}
+.add {
+    width: 126px;
+    height: 156px;
+    margin: 0;
+    cursor: pointer;
+    background: url(/images/icons/add.png) no-repeat 50% 50%;
+}
+.update input, .update textarea, .update input[type=submit] {
+    width: 700px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+.update textarea {
+    height: 400px;
+}
+.upload {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.upload input, .upload input[type=submit] {
+    height: 25px;
+    border: 1px solid #ccc;
+    color: #f9b104;
+}
+.upload input {
+    width: 400px;
+}
+.upload input[type=submit] {
+    width: 200px;
+}
+/* Футер */
+.footer {
+    background-color: #333333;
+    border-top: 1px solid #555555;
+}
+.description,
+.social,
+.contacts {
+    padding: 20px 20px;
+}
+.description {
+    width: 580px;
+}
+.social {
+    width: 230px;
+    min-height: 219px;
+    padding: 20px 20px;
+    margin: 0 20px;
+    background: #222;
+}
+.contacts {
+    width: 230px;
+    padding-left: 20px;
+}
+.contacts .title,
+.social .title,
+.description .title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7f8c8c;
+}
+.contacts .item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.contacts .icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 22px;
+    height: 32px;
+    background: url("/images/icons/contacts.png") no-repeat 0 0;
+}
+.contacts .icon-location {
+    background-position: 0 0;
+}
+.contacts .icon-phone {
+    background-position: -30px 0;
+}
+.contacts .icon-email {
+    background-position: -60px 0;
+}
+.contacts a {
+    color: #e2534b;
+}
+.share {
+    margin-top: 15px;
+}
+.button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background: #16a085 url("/images/icons/social.png") no-repeat;
+    vertical-align: middle;
+}
+.social-vk {
+    background-color: #6d8fb3;
+    background-position: 0 0;
+}
+.social-fb {
+    background-color: #526da3;
+    background-position: -40px 0;
+}
+.social-tw {
+    background-color: #73bfe6;
+    background-position: -80px 0;
+}
+.copyright {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px 0;
+}

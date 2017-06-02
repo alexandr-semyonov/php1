@@ -1,0 +1,17 @@
+<?php include __DIR__ . '/header.html'; ?>
+
+<form action="/send.php" method="post" enctype="multipart/form-data" class="upload">
+    <input type="file" name="userFile" required>
+    <input type="submit" name="upload" value="Загрузить">
+</form>
+
+<?php foreach($this->data['gallery'] as $item): ?>
+
+<div class="gallery left">
+    <a href="/admin/photo.php?id=<?php echo $item['id']; ?>"><img src="/images/gallery/<?php echo $item['name']; ?>"></a>
+</div>
+
+<?php
+endforeach;
+include __DIR__ . '/footer.html';
+?>

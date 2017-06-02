@@ -1,0 +1,13 @@
+<?php
+include __DIR__ . '/header.html';
+foreach($this->data['gallery'] as $item):
+?>
+
+<div class="gallery left">
+    <a href="/photo.php?id=<?php echo $item['id']; ?>"><img src="/images/gallery/<?php echo $item['name']; ?>"></a>
+</div>
+
+<?php
+endforeach;
+include __DIR__ . '/footer.html';
+?>
