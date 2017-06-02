@@ -14,7 +14,7 @@ $data = [
     ':id' => (int)$_GET['id']
 ];
 
-$record = $db->getById($sql, $data);
+$record = $db->query($sql, $data);
 
 if (empty($record)){
     die('Ошибка вывода статьи');
@@ -22,4 +22,4 @@ if (empty($record)){
 
 $view = new View();
 
-$view->assign('record', $record)->display(__DIR__ . '/templates/Article.html');
+$view->assign('record', array_shift($record))->display(__DIR__ . '/templates/Article.html');

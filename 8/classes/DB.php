@@ -30,15 +30,4 @@ class DB
         }
         return $sth->fetchAll();
     }
-
-    public function getById(string $sql, array $data = [])
-    {
-        $sth = $this->dbh->prepare($sql);
-        $result = $sth->execute($data);
-        if ($result === false){
-            return false;
-        }
-        $result = $sth->fetchAll();
-        return array_shift($result);
-    }
 }
