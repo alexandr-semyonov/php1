@@ -72,6 +72,7 @@ if (isset($_POST['upload']) && isset($_FILES['userFile'])){
     if (false === $result){
         die('Не удалось добавить фото!');
     }
+
     $db = new App\Models\DB();
 
     $sql = 'INSERT INTO gallery (name) VALUES (:name)';
