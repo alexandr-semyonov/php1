@@ -12,11 +12,6 @@ class View
         return $this;
     }
 
-    public function display(string $template)
-    {
-        include $template;
-    }
-
     public function render(string $template)
     {
         ob_start();
@@ -25,5 +20,10 @@ class View
         ob_end_clean();
 
         return $content;
+    }
+
+    public function display(string $template)
+    {
+        echo $this->render($template);
     }
 }

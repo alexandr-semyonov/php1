@@ -15,5 +15,6 @@ if (!empty($_GET['id'])){
     $view = new App\View\View();
 
     $view->assign('photo', array_shift($photo))->display(__DIR__ . '/templates/photo.html');
+} else {
+    die('Ошибка показа изображения');
 }
-die('Ошибка показа изображения');

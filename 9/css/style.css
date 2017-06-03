@@ -170,7 +170,7 @@ hr {
 }
 .image {
     width: 760px;
-    margin: 0 20px 20px 20px;
+    margin: 20px;
     background-color: #ffffff;
     display: block;
 }
@@ -295,7 +295,7 @@ hr {
     width: 230px;
     min-height: 219px;
     padding: 20px 20px;
-    margin: 0 20px;
+    margin: 20px 20px;
     background: #222;
 }
 .contacts {
