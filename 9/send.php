@@ -21,7 +21,6 @@ if (isset($_POST['add']) && isset($_POST['text'])){
     ];
     $result = $db->execute($sql, $data);
     if (false === $result){
-
         die('Не удалось добавить запись!');
     }
     header('Location: /guestbook.php');

@@ -6,7 +6,7 @@ class View
 {
     protected $data;
 
-    public function assign(string $name, $value)
+    public function assign(string $name, array $value)
     {
         $this->data[$name] = $value;
         return $this;

@@ -6,7 +6,7 @@ class Uploader
 {
     public $name;
 
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -23,7 +23,7 @@ class Uploader
         return false;
     }
 
-    public function upload($path)
+    public function upload(string $path)
     {
         if (true === $this->isUploaded()) {
             $filename = '/' . $_FILES[$this->name]['name'];
