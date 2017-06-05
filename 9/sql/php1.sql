@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июн 02 2017 г., 17:01
+-- Время создания: Июн 05 2017 г., 13:27
 -- Версия сервера: 5.7.16
 -- Версия PHP: 7.1.0
 
@@ -64,7 +64,8 @@ INSERT INTO `gallery` (`id`, `name`) VALUES
 (7, 'g7.jpg'),
 (8, 'g8.jpg'),
 (9, 'g9.jpg'),
-(36, '25232.jpg');
+(36, '25232.jpg'),
+(37, '0.jpg');
 
 -- --------------------------------------------------------
 
@@ -156,12 +157,12 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT для таблицы `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT для таблицы `guestbook`
 --
 ALTER TABLE `guestbook`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
