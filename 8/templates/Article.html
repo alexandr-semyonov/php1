@@ -9,19 +9,19 @@
 
 <span class="back"><a href="/">Назад</a></span>
 
-<h3><?php echo $this->data['record']['title']; ?></h3>
+<h3><?php echo $this->data['records']['title']; ?></h3>
 <div>
-    <?php echo $this->data['record']['text']; ?>
+    <?php echo $this->data['records']['text']; ?>
     <div class="down">
         <form action="/send.php" method="post">
-            <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $this->data['records']['id']; ?>">
             <button type="submit" name="delete" class="delete"></button>
         </form>
         <form action="/update.php" method="post">
-            <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+            <input type="hidden" name="id" value="<?php echo $this->data['records']['id']; ?>">
             <button type="submit" name="update" class="update"></button>
         </form>
-        <span class="author"><?php echo $this->data['record']['author']; ?></span>
+        <span class="author"><?php echo $this->data['records']['author']; ?></span>
     </div>
 </div>
 

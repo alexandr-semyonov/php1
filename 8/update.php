@@ -14,12 +14,12 @@ $data = [
     ':id' => (int)$_POST['id']
 ];
 
-$record = $db->query($sql, $data);
+$records = $db->query($sql, $data);
 
-if (empty($record)){
+if (empty($records)){
     die('Ошибка редактирования статьи');
 }
 
 $view = new View();
 
-$view->assign('record', array_shift($record))->display(__DIR__ . '/templates/ArticleUpdate.html');
+$view->assign('records', array_shift($records))->display(__DIR__ . '/templates/ArticleUpdate.html');

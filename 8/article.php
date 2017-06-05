@@ -14,12 +14,12 @@ $data = [
     ':id' => (int)$_GET['id']
 ];
 
-$record = $db->query($sql, $data);
+$records = $db->query($sql, $data);
 
-if (empty($record)){
+if (empty($records)){
     die('Ошибка вывода статьи');
 }
 
 $view = new View();
 
-$view->assign('record', array_shift($record))->display(__DIR__ . '/templates/Article.html');
+$view->assign('records', array_shift($records))->display(__DIR__ . '/templates/Article.html');

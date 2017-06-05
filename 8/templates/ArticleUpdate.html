@@ -7,16 +7,16 @@
 </head>
 <body>
 
-<span class="back"><a href="/article.php?id=<?php echo $this->data['record']['id']; ?>">Назад</a></span>
+<span class="back"><a href="/article.php?id=<?php echo $this->data['records']['id']; ?>">Назад</a></span>
 
 <form action="/send.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $this->data['record']['id']; ?>">
+    <input type="hidden" name="id" value="<?php echo $this->data['records']['id']; ?>">
     Заголовок:
-    <input type="text" name="title" value="<?php echo $this->data['record']['title']; ?>" class="form" required>
+    <input type="text" name="title" value="<?php echo $this->data['records']['title']; ?>" class="form" required>
     Текст:
-    <textarea name="text" class="text" required><?php echo $this->data['record']['text']; ?></textarea>
+    <textarea name="text" class="text" required><?php echo $this->data['records']['text']; ?></textarea>
     Автор:
-    <input type="text" name="author" value="<?php echo $this->data['record']['author']; ?>" class="form">
+    <input type="text" name="author" value="<?php echo $this->data['records']['author']; ?>" class="form">
     <input type="submit" name="update" value="Отправить">
 </form>
 
