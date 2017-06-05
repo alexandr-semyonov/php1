@@ -5,7 +5,7 @@ if (empty($_GET['id'])){
     die('Ошибка показа изображения');
 }
 
-$db = new \App\Models\DB();
+$db = new \App\DB();
 
 $id = (int)$_GET['id'];
 $sql = 'SELECT * FROM gallery WHERE id=:id';

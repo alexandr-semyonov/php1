@@ -11,7 +11,7 @@ if (isset($_POST['add']) && isset($_POST['text'])){
     $text = trim($_POST['text']);
     $date = date("Y-m-d");
 
-    $db = new App\Models\DB();
+    $db = new App\DB();
 
     $sql = 'INSERT INTO guestbook (name, text, date) VALUES (:name, :text, :date)';
     $data = [
@@ -30,7 +30,7 @@ if (isset($_POST['add']) && isset($_POST['text'])){
 if (isset($_POST['delete']) && isset($_POST['id'])){
     $id = (int)$_POST['id'];
 
-    $db = new App\Models\DB();
+    $db = new App\DB();
 
     $sql = 'DELETE FROM guestbook WHERE id=:id';
     $data = [
@@ -49,7 +49,7 @@ if (isset($_POST['update']) && isset($_POST['id']) && isset($_POST['title']) && 
     $title = trim($_POST['title']);
     $text = trim($_POST['text']);
 
-    $db = new App\Models\DB();
+    $db = new App\DB();
 
     $sql = 'UPDATE about SET title=:title, text=:text WHERE id=:id';
     $data = [
@@ -73,7 +73,7 @@ if (isset($_POST['upload']) && isset($_FILES['userFile'])){
         die('Не удалось добавить фото!');
     }
 
-    $db = new App\Models\DB();
+    $db = new App\DB();
 
     $sql = 'INSERT INTO gallery (name) VALUES (:name)';
     $data = [

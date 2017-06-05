@@ -7,7 +7,7 @@ if (!isset($_POST['update']) || !isset($_POST['id'])) {
 
 $id = (int)$_POST['id'];
 
-$db = new App\Models\DB();
+$db = new App\DB();
 
 $sql = 'SELECT * FROM about WHERE id=:id';
 

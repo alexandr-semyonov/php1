@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/autoload.php';
 
-$db = new \App\Models\DB();
+$db = new \App\DB();
 
 $sql = 'SELECT * FROM guestbook';
 
